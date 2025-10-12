@@ -1,0 +1,13 @@
+﻿@model List<ETUPortal.Models.Faculty>;
+<h1>Факультеты</h1>
+@foreach (var f in Model)
+{
+	<h2>@f.Name</h2>
+	<p>Расшифровывается как <b>@f.FullName</b></p>
+	@if (f.Description is not null && f.Description != String.Empty)
+	{
+	<i>Описание</i><br/>
+	<p>@f.Description</p>
+	}
+}
+
