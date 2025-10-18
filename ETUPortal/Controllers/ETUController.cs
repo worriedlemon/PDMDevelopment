@@ -77,15 +77,57 @@ namespace ETUPortal.Controllers
             };
         }
 
-
+        [Route("buildings")]
         public IActionResult Buildings()
         {
             return View(buildings);
         }
 
+        [Route("buildings/{id}")]
+        public IActionResult Building(int id)
+        {
+            try
+            {
+                Building building = buildings.SingleOrDefault(b => b.Id == id) ??
+                    throw new NullReferenceException($"Building with id {id} not found!");
+
+                return View(building);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return Redirect("/");
+            }
+        }
+
+        [Route("faculties")]
         public IActionResult Faculties()
         {
             return View(faculties);
+        }
+
+        [Route("faculties/{id}")]
+        public IActionResult Faculty(int id)
+        {
+            try
+            {
+                Faculty? faculty = faculties.SingleOrDefault(f => f.Id == id);
+                if (faculty is null)
+                {
+                    throw new NullReferenceException($"Faculty with id {id} not found!");
+                }
+                else if (faculty.Description is null)
+                {
+                    throw new ArgumentException($"Faculty with id {id} has no description to show!");
+                }
+
+                return View(faculty);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return Redirect("/");
+            }
         }
     }
 }

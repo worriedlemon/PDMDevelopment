@@ -3,6 +3,8 @@
 <ul>
 	@foreach (var item in Model)
 	{
-		<li>@item.Name</li>
+		<li>
+			<a href="buildings/@item.Id">@item.Name</a>
+		</li>
 	}
 </ul>

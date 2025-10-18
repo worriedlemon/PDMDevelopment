@@ -6,8 +6,6 @@
 	<p>Расшифровывается как <b>@f.FullName</b></p>
 	@if (f.Description is not null && f.Description != String.Empty)
 	{
-	<i>Описание</i><br/>
-	<p>@f.Description</p>
+	<i><a href="faculties/@f.Id">Подробнее...</a></i><br/>
 	}
 }
-
