@@ -1,0 +1,37 @@
+﻿h1 {
+    display: inline-block;
+    font-family: "Arial Black", sans-serif;
+    font-weight: bolder;
+    text-shadow: 3px black;
+    padding-bottom: 5px;
+    border-bottom: 5px solid black;
+}
+
+ul
+{
+    padding-left: 0;
+}
+
+    ul li {
+        display: block;
+        padding: 10px 10px;
+        margin: 20px 0px;
+        list-style: none;
+        font-size: 18px;
+        border-radius: 10px;
+        border: 2px dotted lightgray;
+        transition: transform 0.1s;
+    }
+
+        ul li a
+        {
+            text-decoration: none;
+            transition: font-size 0.1s;
+            color: indigo;
+        }
+
+            ul li a:hover {
+                font-weight: bold;
+                font-size: 1.1em;
+                color: purple;
+            }

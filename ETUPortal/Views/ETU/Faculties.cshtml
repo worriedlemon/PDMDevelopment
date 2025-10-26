@@ -2,10 +2,12 @@
 <h1>Факультеты</h1>
 @foreach (var f in Model)
 {
-	<h2>@f.Name</h2>
-	<p>Расшифровывается как <b>@f.FullName</b></p>
-	@if (f.Description is not null && f.Description != String.Empty)
-	{
-	<i><a href="faculties/@f.Id">Подробнее...</a></i><br/>
-	}
+	<div class="faculty">
+		<h2>@f.Name</h2>
+		<p>Расшифровывается как <b>@f.FullName</b></p>
+		@if (f.Description is not null && f.Description != String.Empty)
+		{
+		<i><a href="faculties/@f.Id">Подробнее...</a></i><br/>
+		}
+	</div>
 }
