@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СПбГЭТУ «ЛЭТИ»</title>
+</head>
+<body>
+<header>
+    <h1>СПбГЭТУ «ЛЭТИ»</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Образование</a></li>
+        <li><a href="#">Новости</a></li>
+        <li><a href="#">Контакты</a></li>
+    </ul>
+</nav>
+<hr/>
+<main>
+    <section>
+        <h2>Контактная информация</h2>
+        <p><strong>Адрес:</strong> ул. Профессора Попова, дом 5 литера Ф, Санкт-Петербург</p>
+        <p><strong>Телефон:</strong> +7 812 234-46-51</p>
+        <p><strong>Email:</strong> info@etu.ru</p>
+    </section>
+    <hr/>
+    <section>
+        <h2>Новости</h2>
+        <article>
+            <h3>Новый учебный год стартует с инновациями</h3>
+            <p>В новом учебном году ЛЭТИ внедряет передовые методы обучения с использованием виртуальной реальности...</p>
+        </article>
+        <br/>
+        <article>
+            <h3>Студенты выиграли международный хакатон</h3>
+            <p>Команда студентов ФКТИ разработала приложение для умного города и заняла первое место...</p>
+        </article>
+    </section>
+    <hr/>
+    <section>
+        <h2>Направления подготовки</h2>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Направление</th>
+                <th>Код</th>
+                <th>Кафедра</th>
+                <th>Количество мест</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Прикладная информатика</td>
+                <td>09.03.03</td>
+                <td>Информационных систем</td>
+                <td>120</td>
+            </tr>
+            <tr>
+                <td>Компьютерная безопасность</td>
+                <td>10.03.01</td>
+                <td>Информационной безопасности</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>Искусственный интеллект</td>
+                <td>01.03.02</td>
+                <td>Вычислительной техники</td>
+                <td>60</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <hr/>
+    <section>
+        <h2>Форма подачи заявления</h2>
+        <form action="#" method="post">
+            <div>
+                <label for="fullname">ФИО:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <div>
+                <label for="birthdate">Дата рождения:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+
+            <div>
+                <label for="schoolfinish">Дата окончания школы:</label>
+                <input type="date" id="schoolfinish" name="schoolfinish" required>
+            </div>
+
+            <div>
+                <label for="education">Предыдущее образование:</label>
+                <select id="education" name="education" required>
+                    <option value="">Выберите уровень образования</option>
+                    <option value="highschool">Среднее общее образование</option>
+                    <option value="college">Среднее профессиональное образование</option>
+                    <option value="bachelor">Высшее образование (бакалавриат)</option>
+                    <option value="master">Высшее образование (магистратура)</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="direction">Направление подготовки:</label>
+                <select id="direction" name="direction" required>
+                    <option value="">Выберите направление</option>
+                    <option value="informatics">Прикладная информатика</option>
+                    <option value="security">Информационная безопасность</option>
+                    <option value="engineering">Программная инженерия</option>
+                    <option value="ai">Искусственный интеллект</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="phone">Контактный телефон:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+7 (XXX) XXX-XX-XX">
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="comment">Дополнительная информация:</label><br>
+                <textarea id="comment" name="comment" rows="4" placeholder="Расскажите о своих интересах и достижениях..."></textarea>
+            </div>
+
+            <button type="submit">Подать заявление</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p><a href="index.html">Эта же страница, но со стилями</a></p>
+    <p>&copy; 2025 СПбГЭТУ «ЛЭТИ».</p>
+    <p>ул. Профессора Попова, дом 5 литера Ф, Санкт-Петербург, Россия, 197022. +7 812 234-46-51. info@etu.ru</p>
+</footer>
+</body>
+</html>
