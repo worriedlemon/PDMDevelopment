@@ -1,0 +1,9 @@
+@model Faculty
+<div class="faculty">
+	<h2>@Model.Name</h2>
+	<p>Расшифровывается как <b>@Model.FullName</b></p>
+	@if (!String.IsNullOrEmpty(Model.Description))
+	{
+		<i><a href="faculties/@Model.Id">Подробнее...</a></i><br/>
+	}
+</div>
