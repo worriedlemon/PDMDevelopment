@@ -1,13 +1,6 @@
 ﻿@model List<ETUPortal.Models.Faculty>;
 <h1>Факультеты</h1>
-@foreach (var f in Model)
+@foreach (var item in Model)
 {
-	<div class="faculty">
-		<h2>@f.Name</h2>
-		<p>Расшифровывается как <b>@f.FullName</b></p>
-		@if (f.Description is not null && f.Description != String.Empty)
-		{
-		<i><a href="faculties/@f.Id">Подробнее...</a></i><br/>
-		}
-	</div>
+	@await Component.InvokeAsync("Faculty", new { faculty = item })
 }
